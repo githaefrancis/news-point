@@ -4,7 +4,8 @@ class Config:
   '''
   General configuration parent class
   '''
-  pass
+  NEWS_BASE_URL=os.environ.get('NEWS_BAS_URL')
+  NEWS_API_KEY=os.environ.get('NEWS_API_KEY')
 
 class ProdConfig(Config):
   '''
