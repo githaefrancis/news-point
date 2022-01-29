@@ -2,7 +2,7 @@ import unittest
 from unittest.main import main
 # from ..app import create_app
 # app=create_app('development')
-from app import models
+from app.models import Article
 
 class SourceTest(unittest.TestCase):
   '''
@@ -13,10 +13,10 @@ class SourceTest(unittest.TestCase):
     '''
     setUp method that will run 
     '''
-    self.new_source=models.Source(1,'Bbc','British News Source',"https://sdfds.com","Sports","Kenya")
+    self.new_source=Article('Bbc','Kevin',"sdafsd","rewrfefde","https://sdfds.com","https://sdfds.com","29/01/2022","fdsfdsfdsfdsfdsf")
 
   def test_instance(self):
-    self.assertTrue(isinstance(self.new_source,models.Source))
+    self.assertTrue(isinstance(self.new_source,Article))
 
 if __name__=='__main__':
-  unittest.main()
+  unittest.run()

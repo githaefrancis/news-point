@@ -18,7 +18,8 @@ class Article:
   '''
   Article class that defines news article objects
   '''
-  def __init__(self, source_name,author,title,description,url,image_url,publication_date,content):
+  def __init__(self, source_id,source_name,author,title,description,url,image_url,publication_date,content):
+    self.source_id=source_id
     self.source_name=source_name
     self.author=author
     self.title=title
@@ -27,4 +28,3 @@ class Article:
     self.image_url=image_url
     self.publication_date=publication_date
     self.content=content
-    
