@@ -2,5 +2,14 @@
 
 {% block content %}
 <p class="text-danger"> Welcome to the News today</p>
+
+{%for source in news_sources[:10]: %}
+<ul>
+
+  <li>{{source.name}}</li>
+</ul>
+
+{% endfor %}
+
 {% endblock  %}
 

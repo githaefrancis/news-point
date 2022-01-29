@@ -10,3 +10,6 @@ class Source:
     self.url=url
     self.category=category
     self.country=country
+
+  def __str__(self):
+    return f"{self.id} {self.name}"

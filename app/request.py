@@ -23,7 +23,7 @@ def get_sources():
     if get_sources_response['sources']:
       sources_result_list=get_sources_response['sources']
       sources_results=map_results(sources_result_list)
-
+  print("HELLO")
   return sources_results 
 
 
@@ -46,7 +46,7 @@ def map_results(sources_results):
     url=source.get('url')
     category=source.get('category')
     country=source.get('country')
-
+    print(name)
     new_source=Source(id,name,description,url,category,country)
     sources_list.append(new_source)
 
