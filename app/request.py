@@ -40,7 +40,7 @@ def get_headlines():
     if get_headlines_response['articles']:
       headlines_result_list=get_headlines_response['articles']
       headlines_results=map_articles_results(headlines_result_list)
-
+  return headlines_results
 
 def map_sources_results(sources_results):
   '''
@@ -67,7 +67,7 @@ def map_sources_results(sources_results):
 
   return sources_list
 
-def map_articles_results():
+def map_articles_results(headlines_results):
   '''
   map articles results to a list of article objects
 
@@ -78,7 +78,7 @@ def map_articles_results():
         A list of articles objects
   '''
   headlines_list=[]
-  for headline in headlines_list:
+  for headline in headlines_results:
     source_id=headline.get('source').get('id')
     source_name=headline.get('source').get('name')
     author=headline.get('author')

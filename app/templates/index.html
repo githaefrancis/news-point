@@ -12,14 +12,31 @@
   </div>
 </div>
 
-{%for source in news_sources[:50]: %}
+<!-- {%for source in news_sources[:50]: %}
 <ul>
 
   <li>{{source.name}}</li>
   <li>{{source.url}}</li>
 </ul>
 
-{% endfor %}
+{% endfor %} -->
+<div class="row">
+{% for headline in news_headlines[:20]: %}
+<div class="col-4">
+<div class="card">
+  <div class="card-title">
+    {{headline.title}}
+  </div>
+  <div class="card-body">
+  <div class="card-img">
+    dsf
+  </div>
+</div>
 
+</div>
+</div>
+
+{% endfor %}
+</div>
 {% endblock  %}
 
