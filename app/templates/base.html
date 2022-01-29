@@ -58,7 +58,18 @@
 
     {% block header %} {% endblock %}
     <div class="row container-fluid mt-5 pt-3">
-      <div class="col-lg-2 position-fixed bg-secondary vh-100 mb-2">dsfudshf</div>
+      <div class="col-lg-2 position-fixed bg-secondary vh-100 rounded-2 d-lg-flex d-sm-none">
+        
+        <ul>
+          <li>Breaking News</li>
+          <li>Politics</li>
+          <li>Education</li>
+          <li>Business</li>
+          <li>Global</li>
+          <li>Sports</li>
+        </ul>
+      
+      </div>
 
       <div class="col-lg-10 px-5 offset-lg-2">{% block content %} {% endblock %}</div>
     </div>
