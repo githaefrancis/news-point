@@ -22,13 +22,14 @@
 .footer {
   height: 8rem;
   margin-bottom: 0rem;
+  clear: both;
 }
 
 .categories li {
   margin-top: 2em;
 }
 
-.categories a {
+a {
   text-decoration: none;
 }
 

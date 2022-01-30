@@ -26,3 +26,8 @@ def category(category_name):
     time = datetime.now()
     date_today = time.strftime("%b %d, %Y")
     return render_template('index.html', news_headlines=category_news,date_today=date_today)
+
+@main.route('/sources')
+def display_sources():
+  news_sources = get_sources()
+  return render_template('sources.html',news_sources=news_sources)
