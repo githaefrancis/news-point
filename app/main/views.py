@@ -9,7 +9,7 @@ def index():
   news_headlines=get_headlines()
   print(news_sources)
   time=datetime.now()
-  date_today=time.strftime("%b %d, %Y")
+  date_today=time.strftime("%b %d, %Y %H:%M:%S")
   return render_template('index.html',news_sources=news_sources,news_headlines=news_headlines,date_today=date_today)
 
 

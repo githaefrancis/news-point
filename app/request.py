@@ -1,6 +1,10 @@
+from ast import parse
+from datetime import datetime
 from pydoc import describe
 import urllib.request,json
 from .models import Source,Article
+from dateutil.parser import isoparse
+from dateutil.tz import UTC
 
 api_key=None
 base_url=None
@@ -102,9 +106,12 @@ def map_articles_results(headlines_results):
     image_url=headline.get('urlToImage')
     publication_date=headline.get('publishedAt')
     content=headline.get('content')
-
+    pub_date=isoparse(publication_date)
+    pub_date.astimezone(UTC)
+    converted_publication_date=pub_date.strftime("%b %d, %Y %H:%M:%S")
+    
     if content:
-      headline_object=Article(source_id,source_name,author,title,description,url,image_url,publication_date,content)
+      headline_object=Article(source_id,source_name,author,title,description,url,image_url,converted_publication_date,content)
       headlines_list.append(headline_object)
 
   return headlines_list
