@@ -53,6 +53,11 @@ Create the environment  variables
 export NEWS_BASE_URL='https://newsapi.org/v2/'
 export NEWS_API_KEY='<Your Api Key>'
 
+5. Load the environment variables
+
+```bash
+source .env
+```
 4. Grant the python executable permissions
 
 ```
