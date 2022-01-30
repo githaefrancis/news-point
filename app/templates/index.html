@@ -24,12 +24,12 @@
 {% for headline in news_headlines[:20]: %}
 <div class="col-4">
 <div class="card article my-2">
-  <div class="card-title">
-    {{headline.title}}
+  <div class="card-title px-3 fw-bold text-decoration-underline">
+    <p class="headline-title">{{headline.title | truncate(100)}}</p>
   </div>
   <div class="card-body">
   <div class="card-img">
-    <img src="{{headline.image_url}}" class="img-fluid article-img" alt="">
+    <img src="{{headline.image_url}}" class="img-fluid article-img rounded-3" alt="">
   </div>
   <div class="card-text">
     <p>{{headline.content | truncate(100)}}   <span class="text-primary">Read</span></p>
