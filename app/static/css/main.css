@@ -2,7 +2,7 @@
   box-sizing: content-box;
 }
 .article{
-height:26rem;
+height:28rem;
 }
 
 .article-img{
@@ -17,4 +17,11 @@ width: 100%;
 .footer{
   height:8rem;
   margin-bottom: 0rem;
+}
+
+@media only screen and (max-width:480px){
+
+  .news-sources{
+    display: none;
+  }
 }

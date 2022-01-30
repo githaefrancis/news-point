@@ -4,7 +4,7 @@
 <h3 class="fw-bold"> Welcome to the News today - {{date_today}}</h3>
 <hr>
 <div class="container news-sources">
-  <div class="d-inline-block
+  <div class="d-lg-inline-block
    ">
   {%for source in news_sources[:25]: %}
       <a href="/source/{{source.id}}"><span class="badge fw-bold text-dark bg-light m-2"><h5>{{source.name}}</h5></span></a>
@@ -14,9 +14,9 @@
 
 <div class="row">
 {% for headline in news_headlines[:20]: %}
-<div class="col-4">
+<div class="col-sm-12 col-md-12 col-lg-4">
 <div class="card article my-2">
-  <div class="card-title px-3 fw-bold text-decoration-underline">
+  <div class="card-title px-lg-3 fw-bold text-decoration-underline">
     <p class="headline-title">{{headline.title | truncate(100)}}</p>
   </div>
   <div class="card-body">

@@ -2,13 +2,13 @@
 <h3 class="text-center">News from {{news_from_source[0].source_name}}</h3>
 {% for news_article in
 news_from_source[:20]: %}
-
+<div class="container-fluid">
 <div class="card mb-3">
-  <div class="row g-0">
-    <div class="col-md-4">
+  <div class="row g-0 d-flex">
+    <div class="col-12 col-sm-12 col-lg-4 col-md-12">
       <img src="{{news_article.image_url}}" class="img-fluid rounded-start" alt="..." />
     </div>
-    <div class="col-md-8">
+    <div class="col-12 col-sm-12 col-lg-8 col-md-12">
       <div class="card-body">
         <h5 class="card-title">{{news_article.title}}</h5>
         <p class="card-text">
@@ -24,5 +24,5 @@ news_from_source[:20]: %}
     </div>
   </div>
 </div>
-
+</div>
 {% endfor %} {% endblock %}
