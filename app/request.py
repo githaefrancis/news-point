@@ -42,6 +42,20 @@ def get_headlines():
       headlines_results=map_articles_results(headlines_result_list)
   return headlines_results
 
+def get_news_from_source(source_id):
+  get_news_url=f"{base_url}top-headlines?sources={source_id}&apiKey={api_key}"
+  with urllib.request.urlopen(get_news_url) as url:
+    get_news=url.read()
+    get_news_response=json.loads(get_news)
+    news_results=None
+
+    if get_news_response['articles']:
+      news_results_list=get_news_response['articles']
+      news_results=map_articles_results(news_results_list)
+
+
+  return news_results
+
 def map_sources_results(sources_results):
   '''
   map_results function to create sources objects

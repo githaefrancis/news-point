@@ -1,6 +1,6 @@
 from flask import render_template
 from . import main
-from ..request import get_sources,get_headlines
+from ..request import get_sources,get_headlines,get_news_from_source
 from datetime import datetime
 
 @main.route('/')
@@ -13,3 +13,7 @@ def index():
   return render_template('index.html',news_sources=news_sources,news_headlines=news_headlines,date_today=date_today)
 
 
+@main.route('/source/<string:source_id>')
+def news_source(source_id):
+  news_from_source=get_news_from_source(source_id)
+  return render_template('news.html',news_from_source=news_from_source)

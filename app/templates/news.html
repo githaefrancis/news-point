@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% for news_article in news_from_source[:20]: %}
+
+{{news_article.author}}
+
+{% endfor %}
+{% endblock %}
