@@ -19,6 +19,16 @@ width: 100%;
   margin-bottom: 0rem;
 }
 
+.categories li{
+  margin-top:2em;
+}
+
+a:hover,a:hover span{
+  cursor:pointer;
+  color:red!important;
+  transform: scale(1.2);
+}
+
 @media only screen and (max-width:480px){
 
   .news-sources{
