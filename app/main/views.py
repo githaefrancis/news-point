@@ -1,6 +1,6 @@
 from flask import render_template
 from . import main
-from ..request import get_sources,get_headlines,get_news_from_source
+from ..request import get_sources,get_headlines,get_news_from_source,get_category_news
 from datetime import datetime
 
 @main.route('/')
@@ -17,3 +17,8 @@ def index():
 def news_source(source_id):
   news_from_source=get_news_from_source(source_id)
   return render_template('news.html',news_from_source=news_from_source)
+
+@main.route('/category/<string:category_name>')
+def category(category_name):
+  category_news=get_category_news(category_name)
+  return render_template('index.html',news_headlines=category_news)

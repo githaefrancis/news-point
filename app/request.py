@@ -60,6 +60,19 @@ def get_news_from_source(source_id):
 
   return news_results
 
+def get_category_news(category):
+  get_category_news_url=f"{base_url}top-headlines?category={category}&apiKey={api_key}"
+  with urllib.request.urlopen(get_category_news_url) as url:
+    get_category_news=url.read()
+    get_category_news_response=json.loads(get_category_news)
+    category_news_results=None
+
+    if get_category_news_response['articles']:
+      category_news_list=get_category_news_response['articles']
+      category_news_results=map_articles_results(category_news_list)
+
+  return category_news_results
+  
 def map_sources_results(sources_results):
   '''
   map_results function to create sources objects

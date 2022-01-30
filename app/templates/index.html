@@ -3,6 +3,7 @@
 {% block content %}
 <h3 class="fw-bold"> Welcome to the News today - {{date_today}}</h3>
 <hr>
+{% if news_sources %}
 <div class="container news-sources">
   <div class="d-lg-inline-block
    ">
@@ -11,7 +12,7 @@
     {% endfor %}
   </div>
 </div>
-
+{% endif %}
 <div class="row">
 {% for headline in news_headlines[:20]: %}
 <div class="col-sm-12 col-md-12 col-lg-4">
