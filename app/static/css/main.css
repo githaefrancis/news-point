@@ -1,3 +1,6 @@
+.html {
+  box-sizing: content-box;
+}
 .article{
 height:26rem;
 }
@@ -9,4 +12,9 @@ width: 100%;
 
 .headline-title{
   height: 3.5rem;
+}
+
+.footer{
+  height:8rem;
+  margin-bottom: 0rem;
 }
