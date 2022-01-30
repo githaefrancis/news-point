@@ -103,7 +103,8 @@ def map_articles_results(headlines_results):
     publication_date=headline.get('publishedAt')
     content=headline.get('content')
 
-    headline_object=Article(source_id,source_name,author,title,description,url,image_url,publication_date,content)
-    headlines_list.append(headline_object)
+    if content:
+      headline_object=Article(source_id,source_name,author,title,description,url,image_url,publication_date,content)
+      headlines_list.append(headline_object)
 
   return headlines_list
