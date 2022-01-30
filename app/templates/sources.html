@@ -2,9 +2,10 @@
 
 {% block content %}
 <div class="row g-1">
+  <h5 class="text-center">News Sources</h5>
   {% for source in news_sources: %}
   <div class="col-12 col-lg-6">
-    <div class="card"> <p class="d-flex justify-content-around"><span> {{source.name}} </span> <span> <a href="">Visit Site</a></span><span><a href="">View News</a></span></p></div>
+    <div class="card"> <p class="d-flex justify-content-around"><span> {{source.name}} </span> <span> <a href="{{source.url}}" target="_blank">Visit Site</a></span><span><a href="/source/{{source.id}}">View News</a></span></p></div>
   </div>
   {% endfor %}
 
