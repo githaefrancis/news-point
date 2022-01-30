@@ -69,6 +69,10 @@ chmod +x start.sh
 ./start.sh
 ```
 
+## Live Link
+
+[News Point](https://news-point.herokuapp.com/ )
+
 ## Contact
 Email: mureithigithae@gmail.com
 
