@@ -1,37 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+* {
+  font-family: "Lato", sans-serif;
+}
+
 .html {
   box-sizing: content-box;
 }
-.article{
-height:28rem;
+.article {
+  height: 28rem;
 }
 
-.article-img{
-height: 15rem;
-width: 100%;
+.article-img {
+  height: 15rem;
+  width: 100%;
 }
 
-.headline-title{
+.headline-title {
   height: 3.5rem;
 }
 
-.footer{
-  height:8rem;
+.footer {
+  height: 8rem;
   margin-bottom: 0rem;
 }
 
-.categories li{
-  margin-top:2em;
+.categories li {
+  margin-top: 2em;
 }
 
-a:hover,a:hover span{
-  cursor:pointer;
-  color:red!important;
+.categories a {
+  text-decoration: none;
+}
+
+a:hover,
+a:hover span {
+  cursor: pointer;
+  color: red !important;
   transform: scale(1.2);
 }
 
-@media only screen and (max-width:480px){
-
-  .news-sources{
+@media only screen and (max-width: 480px) {
+  .news-sources {
     display: none;
   }
 }
