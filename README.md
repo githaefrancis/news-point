@@ -11,7 +11,8 @@ Francis Githae
 # Technologies
 
 Python 3.8.10
-
+Flask
+Bootstrap
 ## Dependencies
 
 autopep8==1.6.0
