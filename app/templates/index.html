@@ -23,13 +23,16 @@
 <div class="row">
 {% for headline in news_headlines[:20]: %}
 <div class="col-4">
-<div class="card">
+<div class="card article my-2">
   <div class="card-title">
     {{headline.title}}
   </div>
   <div class="card-body">
   <div class="card-img">
-    dsf
+    <img src="{{headline.image_url}}" class="img-fluid article-img" alt="">
+  </div>
+  <div class="card-text">
+    <p>{{headline.content | truncate(100)}}   <span class="text-primary">Read</span></p>
   </div>
 </div>
 
