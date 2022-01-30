@@ -1,9 +1,28 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} {% block content %} 
+<h3 class="text-center">News from {{news_from_source[0].source_name}}</h3>
+{% for news_article in
+news_from_source[:20]: %}
 
-{% block content %}
-{% for news_article in news_from_source[:20]: %}
+<div class="card mb-3">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="..." class="img-fluid rounded-start" alt="..." />
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{news_article.title}}</h5>
+        <p class="card-text">
+          {{news_article.content | truncate(200)}}
+          <a href="{{news_article.url}}" target="_blank"
+            ><span class="badge bg-primary">Read</span></a
+          >
+        </p>
+        <p class="card-text">
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
 
-{{news_article.author}}
-
-{% endfor %}
-{% endblock %}
+{% endfor %} {% endblock %}

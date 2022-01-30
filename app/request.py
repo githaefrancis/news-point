@@ -43,7 +43,7 @@ def get_headlines():
   return headlines_results
 
 def get_news_from_source(source_id):
-  get_news_url=f"{base_url}top-headlines?sources={source_id}&apiKey={api_key}"
+  get_news_url=f"{base_url}everything?sources={source_id}&apiKey={api_key}"
   with urllib.request.urlopen(get_news_url) as url:
     get_news=url.read()
     get_news_response=json.loads(get_news)

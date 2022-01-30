@@ -32,7 +32,7 @@
     <img src="{{headline.image_url}}" class="img-fluid article-img rounded-3" alt="">
   </div>
   <div class="card-text">
-    <p>{{headline.content | truncate(100)}}   <span class="text-primary">Read</span></p>
+    <p>{{headline.content | truncate(100)}}   <a href="{{headline.url}}" target="_blank"><span class="badge bg-primary">Read</span></a></p>
   </div>
 </div>
 
