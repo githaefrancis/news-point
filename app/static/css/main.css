@@ -33,7 +33,6 @@ a {
   text-decoration: none;
 }
 
-a:hover,
 a:hover span {
   cursor: pointer;
   color: red !important;
