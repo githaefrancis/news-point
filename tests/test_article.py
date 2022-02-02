@@ -4,7 +4,7 @@ from unittest.main import main
 # app=create_app('development')
 from app.models import Article
 
-class SourceTest(unittest.TestCase):
+class ArticleTest(unittest.TestCase):
   '''
   Test Class to test the behaviour of the Source 
   '''
@@ -13,7 +13,7 @@ class SourceTest(unittest.TestCase):
     '''
     setUp method that will run 
     '''
-    self.new_source=Article('Bbc','Kevin',"sdafsd","rewrfefde","https://sdfds.com","https://sdfds.com","29/01/2022","fdsfdsfdsfdsfdsf")
+    self.new_source=Article('bbc','Bbc','Kevin',"sdafsd","rewrfefde","https://sdfds.com","https://sdfds.com","29/01/2022","fdsfdsfdsfdsfdsf")
 
   def test_instance(self):
     self.assertTrue(isinstance(self.new_source,Article))
