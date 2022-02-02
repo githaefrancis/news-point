@@ -25,7 +25,7 @@ def category(category_name):
     category_news = get_category_news(category_name)
     time = datetime.now()
     date_today = time.strftime("%b %d, %Y")
-    return render_template('index.html', news_headlines=category_news,date_today=date_today)
+    return render_template('index.html', news_headlines=category_news,date_today=date_today,category=category_name)
 
 @main.route('/sources')
 def display_sources():

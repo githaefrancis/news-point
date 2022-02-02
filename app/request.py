@@ -61,7 +61,7 @@ def get_news_from_source(source_id):
   return news_results
 
 def get_category_news(category):
-  get_category_news_url=f"{base_url}top-headlines?category={category}&apiKey={api_key}"
+  get_category_news_url=f"{base_url}top-headlines?category={category}&country=us&apiKey={api_key}"
   with urllib.request.urlopen(get_category_news_url) as url:
     get_category_news=url.read()
     get_category_news_response=json.loads(get_category_news)
